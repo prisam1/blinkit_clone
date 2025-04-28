@@ -57,7 +57,9 @@ export default function Home() {
             </div>
 
             {/* Tables Section */}
-            <div className="bg-[#F1F1F1] p-[24px]">
+            <div className="bg-[#FAFAFA] p-[24px]">
+              <SkuTable />
+              
               <SkuTable />
             </div>
           </div>

@@ -1,4 +1,4 @@
-// lib/data.ts
+import { SkuData } from "../types/skuData.type";
 
 export const metrics = [
     {
@@ -73,3 +73,45 @@ export const metrics = [
     },
   ];
   
+export const data: SkuData[] = [
+    {
+        id: '1',
+        name: 'Protein Bar 100g',
+        sales: 93132.12,
+        outOfStock: 1.68,
+        inventory: 931.9,
+        avgRank: 3.2,
+        traffic: 12303,
+        impressions: 25005,
+    },
+    {
+        id: '2',
+        name: 'Choco Bar 100g',
+        sales: 8526.32,
+        outOfStock: 6.79,
+        inventory: 679,
+        avgRank: 7,
+        traffic: 3005,
+        impressions: 4231,
+    },
+    {
+        id: '3',
+        name: 'SKU 3',
+        sales: 9313,
+        outOfStock: 1.68,
+        inventory: 931.9,
+        avgRank: 11,
+        traffic: 1931,
+        impressions: 931,
+    },
+    {
+        id: '4',
+        name: 'SKU 4',
+        sales: 0,
+        outOfStock: 0,
+        inventory: 0,
+        avgRank: 0,
+        traffic: 0,
+        impressions: 0,
+    },
+]
