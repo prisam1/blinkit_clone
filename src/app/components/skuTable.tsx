@@ -46,7 +46,7 @@ export default function SkuTable() {
             <div className="rounded-xl border overflow-hidden">
                 <Table className="border-separate border-spacing-0">
                     <TableHeader>
-                        <TableRow className="border-b bg-white">
+                        <TableRow className="border-b bg-white hover:bg-white">
                             <TableHead className="w-[200px]" />
                             <TableHead colSpan={3} className="text-center text-gray-700 border-l border-b">
                                 Availability
