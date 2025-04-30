@@ -10,10 +10,13 @@ import {
 } from '@/components/ui/table'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, ArrowUp } from 'lucide-react'
+import { ChevronDown, ArrowUp, ArrowDown } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { data } from '../lib/data'
+import Image from 'next/image'
+import img from '../assets/chartLine.png'
+
 
 export default function SkuTable() {
     const [expandedRow, setExpandedRow] = useState<string | null>(null)
@@ -55,14 +58,23 @@ export default function SkuTable() {
                                 Visibility
                             </TableHead>
                         </TableRow>
-                        <TableRow className="border-b bg-white">
-                            <TableHead className="font-semibold border-b text-center  align-text-bottom">SKU Name</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Sales</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Out of Stock</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Total Inventory</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Average Rank</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Est. Traffic</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Est. Impressions</TableHead>
+                        <TableRow className="border-b bg-white hover:bg-white">
+                            <TableHead className="flex flex-row gap-[10px] font-semibold border-b text-left align-text-bottom">
+                                <div>
+                                    <Image
+                                        src={img}
+                                        width={20}
+                                        height={20}
+                                        alt="info"
+                                    />
+                                </div>
+                                SKU Name</TableHead>
+                            <TableHead className="font-semibold border-l border-b">Sales  <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b">Out of Stock <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b">Total Inventory <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b">Average Rank <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b">Est. Traffic <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b">Est. Impressions <ChevronDown size={12} className="inline" /></TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
