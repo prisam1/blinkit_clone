@@ -15,14 +15,14 @@ export default function Home() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="flex min-h-screen min-w-[100%] pt-[20px]">
+    <div className="flex min-h-screen min-w-[100%] pt-[20px] pr-[20px]">
       <Sidebar
         open={open}
         setOpen={setOpen}
       />
 
       {/* Main Content */}
-      <Card className="min-h-screen p-0 min-w-[80vh]">
+      <Card className={`min-h-screen p-0 ${open ? " w-[85%]" : "w-[100%]"}`}>
         <CardContent className="p-0">
           <div className="">
             <CardHeader className="flex px-[24px] py-[12px] justify-between items-center">
@@ -42,13 +42,13 @@ export default function Home() {
             </CardHeader>
 
             <div className='w-full h-[1px] bg-[#F1F1F1]' />
-            <div className="px-[16px] py-[12px]">
+            {/* <div className="px-[16px] py-[12px]">
 
-            </div>
+            </div> */}
 
             <div className='w-full h-[1px] bg-[#F1F1F1]' />
             {/* Charts */}
-            <div className="grid grid-cols-3 p-[24px] gap-4 mb-6 bg-[#FAFAFA]">
+            <div className="grid grid-cols-3 px-[24px] pt-[24px] gap-4 bg-[#FAFAFA]">
 
               <SalesCard />
               <SalesCard />
@@ -57,10 +57,9 @@ export default function Home() {
             </div>
 
             {/* Tables Section */}
-            <div className="bg-[#FAFAFA] p-[24px]">
-              <SkuTable />
-              
-              <SkuTable />
+            <div className="bg-[#FAFAFA] px-[24px]">
+              <SkuTable title="SKU level data" subHeading="Analytics for all your SKUs" />
+              <SkuTable title="City level data" subHeading="Analytics for all your Cities" />
             </div>
           </div>
         </CardContent>

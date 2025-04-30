@@ -45,23 +45,23 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
 
   return (
     <div className={`${open ? 'pr-[20px] pl-[0px] w-72' : 'pr-[0px] '} h-full `}>
-      <div className="flex justify-between items-center mb-0">
+      <div className="flex justify-between items-center mb-0 pr-[16px]">
         <div className="flex flex-col items-center pl-[6px]">
           <button onClick={() => setOpen(!open)}>
             {!open ? <Menu className="mb-[16px] w-[36px] h-[36px]" /> : <></>}
           </button>
 
-          <Image src={perfora} className='w-[40px] h-[40px]' alt="info" />
+          <Image src={perfora} className='w-[38px] h-[38px]' alt="info" />
 
         </div>
 
         {open && (
-          <Card className="p-[6px] flex-row gap-[46px] items-center">
+          <Card className="p-[6px] ml-[10px] flex-row w-[170px] gap-[46px] items-center">
             <div className="p-0 flex flex-row gap-[8px] items-center">
               <Image src={ss} width={24} height={24} alt="info" />
               <p className="text-sm">Test_brand</p>
             </div>
-            <CardContent className="p-0">
+            <CardContent className="p-0 pr-[16px]">
               <ChevronUp className="w-[14px] h-[12px]" />
               <ChevronDown className="w-[14px] h-[12px]" />
             </CardContent>
@@ -77,7 +77,7 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
       </div>
 
       <div className={`flex flex-row ${open ? 'mt-[22px]' : ''}`}>
-        <div className="px-[6px] pt-[6px] flex flex-col justify-between">
+        <div className={`px-[6px] pt-[6px] flex flex-col  ${open ? 'pb-[28px]' : 'h-[84vh]'} justify-between`}>
           <div className="w-[40px] flex flex-col gap-[6px]">
             <Image src={mamaEarth} width={40} height={40} alt="info" />
 

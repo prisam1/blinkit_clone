@@ -17,8 +17,13 @@ import { data } from '../lib/data'
 import Image from 'next/image'
 import img from '../assets/chartLine.png'
 
+interface SkuTableProps {
+ title:string;
+ subHeading:string;
+}
 
-export default function SkuTable() {
+
+export default function SkuTable({title,subHeading}:SkuTableProps) {
     const [expandedRow, setExpandedRow] = useState<string | null>(null)
 
     const handleRowClick = (id: string) => {
@@ -31,17 +36,17 @@ export default function SkuTable() {
     const totalImpressions = data.reduce((acc, item) => acc + item.impressions, 0)
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 pt-[48px]">
             {/* Header */}
             <div className="flex items-center justify-between">
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-900">SKU level data</h1>
-                    <p className="text-muted-foreground text-sm">
-                        Analytics for all your SKUs
+                    <h1 className="text-[20px] font-bold text-[#031B15]">{title}</h1>
+                    <p className="text-[#4F4D55] text-sm">
+                       {subHeading}
                     </p>
                 </div>
-                <Button variant="outline" className="flex items-center gap-2 rounded-full border">
-                    Filters (1) <ChevronDown size={16} />
+                <Button variant="outline" className="flex items-center gap-2 font-medium text-[14px] text-white rounded-lg bg-[#027056] px-[12px] py-[10px]">
+                    Filters (1) <ChevronDown size={20} />
                 </Button>
             </div>
 
@@ -51,15 +56,15 @@ export default function SkuTable() {
                     <TableHeader>
                         <TableRow className="border-b bg-white hover:bg-white">
                             <TableHead className="w-[200px]" />
-                            <TableHead colSpan={3} className="text-center text-gray-700 border-l border-b">
+                            <TableHead colSpan={3} className="text-center text-[#013025] border-l border-b">
                                 Availability
                             </TableHead>
-                            <TableHead colSpan={3} className="text-center text-gray-700 border-l border-b">
+                            <TableHead colSpan={3} className="text-center text-[#013025] border-l border-b">
                                 Visibility
                             </TableHead>
                         </TableRow>
                         <TableRow className="border-b bg-white hover:bg-white">
-                            <TableHead className="flex flex-row gap-[10px] font-semibold border-b text-left align-text-bottom">
+                            <TableHead className="flex flex-row gap-[10px] font-semibold border-b text-[#013025] text-left align-text-bottom">
                                 <div>
                                     <Image
                                         src={img}
@@ -69,12 +74,12 @@ export default function SkuTable() {
                                     />
                                 </div>
                                 SKU Name</TableHead>
-                            <TableHead className="font-semibold border-l border-b">Sales  <ChevronDown size={12} className="inline" /></TableHead>
-                            <TableHead className="font-semibold border-l border-b">Out of Stock <ChevronDown size={12} className="inline" /></TableHead>
-                            <TableHead className="font-semibold border-l border-b">Total Inventory <ChevronDown size={12} className="inline" /></TableHead>
-                            <TableHead className="font-semibold border-l border-b">Average Rank <ChevronDown size={12} className="inline" /></TableHead>
-                            <TableHead className="font-semibold border-l border-b">Est. Traffic <ChevronDown size={12} className="inline" /></TableHead>
-                            <TableHead className="font-semibold border-l border-b">Est. Impressions <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Sales  <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Out of Stock <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Total Inventory <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Average Rank <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Est. Traffic <ChevronDown size={12} className="inline" /></TableHead>
+                            <TableHead className="font-semibold border-l border-b text-[#013025]">Est. Impressions <ChevronDown size={12} className="inline" /></TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
