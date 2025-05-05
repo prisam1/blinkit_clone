@@ -58,7 +58,7 @@ export default function Home() {
             </div>
 
             {/* Tables Section */}
-            <div className="bg-[#FAFAFA] px-[24px]">
+            <div className="bg-[#FAFAFA] px-[24px] pb-10">
               <SkuTable 
               data={data}
               title="SKU level data"

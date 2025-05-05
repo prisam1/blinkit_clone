@@ -2,7 +2,6 @@
 
 import { Menu, ChevronsLeft, ChevronDown, ChevronUp } from 'lucide-react'
 import { JSX, useState } from 'react'
-import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import ss from '../assets/ss.png'
@@ -44,14 +43,17 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
   const isActive = (value: string) => selectedChannel === value
 
   return (
-    <div className={`${open ? 'pr-[20px] pl-[0px] w-72' : 'pr-[0px] '} h-full `}>
-      <div className="flex justify-between items-center mb-0 pr-[16px]">
+    <div className={`${open ? 'pr-[20px] w-72' : ''} h-full `}>
+      <div className={`flex justify-between items-center ${open ? "pr-[16px]" : ""}`}>
         <div className="flex flex-col items-center pl-[6px]">
-          <button onClick={() => setOpen(!open)}>
-            {!open ? <Menu className="mb-[16px] w-[36px] h-[36px]" /> : <></>}
+          <button
+            className='p-0'
+            onClick={() => setOpen(!open)}
+          >
+            {!open ? <Menu className="mb-[16px] w-[36px] h-[36px] p-0" /> : <></>}
           </button>
 
-          <Image src={perfora} className='w-[38px] h-[38px]' alt="info" />
+          <Image src={perfora} className='w-[38px] h-[38px] p-0' alt="info" />
 
         </div>
 
@@ -68,12 +70,14 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
           </Card>
         )}
 
-        <button
-          className='w-[16px] h-[16px]'
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <ChevronsLeft color={"#1D874F"} className="w-[16px] h-[16px]" /> : <></>}
-        </button>
+        {open &&
+          <button
+            className='w-[16px] h-[16px]'
+            onClick={() => setOpen(!open)}
+          >
+            <ChevronsLeft color={"#1D874F"} className="w-[16px] h-[16px]" />
+          </button>
+        }
       </div>
 
       <div className={`flex flex-row ${open ? 'mt-[22px]' : ''}`}>
