@@ -83,16 +83,24 @@ export const data: SkuData[] = [
         avgRank: 3.2,
         traffic: 12303,
         impressions: 25005,
+        expand:8526.32,
+        stock:6.79, 
+        totalInventory: 679,
+        rank:7,
+        estTraffic:3005, 
     },
     {
         id: '2',
         name: 'Choco Bar 100g',
-        sales: 8526.32,
-        outOfStock: 6.79,
-        inventory: 679,
+        sales: 7012.72,
+        outOfStock: 3.28,
+        inventory: 328,
         avgRank: 7,
         traffic: 3005,
         impressions: 4231,
+        expand:6.79,
+        rank:7,
+        estTraffic:3005, 
     },
     {
         id: '3',
@@ -103,6 +111,7 @@ export const data: SkuData[] = [
         avgRank: 11,
         traffic: 1931,
         impressions: 931,
+
     },
     {
         id: '4',
@@ -115,3 +124,58 @@ export const data: SkuData[] = [
         impressions: 0,
     },
 ]
+
+
+
+
+export const skuCityData: SkuData[] = [
+  {
+      id: '1',
+      name: 'Delhi',
+      sales: 93132.12,
+      outOfStock: 1.68,
+      inventory: 931.9,
+      avgRank: 3.2,
+      traffic: 12303,
+      impressions: 25005,
+      expand:8526.32,
+      stock:6.79, 
+      totalInventory: 679,
+      rank:7,
+      estTraffic:3005, 
+  },
+  {
+      id: '2',
+      name: 'Bangaluru',
+      sales: 8526.32,
+      outOfStock: 6.79,
+      inventory: 679,
+      avgRank: 7,
+      traffic: 3005,
+      impressions: 4231,
+      expand:6.79,
+      rank:7,
+      estTraffic:3005, 
+  },
+  {
+      id: '3',
+      name: 'SKU 3',
+      sales: 9313,
+      outOfStock: 1.68,
+      inventory: 931.9,
+      avgRank: 11,
+      traffic: 1931,
+      impressions: 931,
+  },
+  {
+      id: '4',
+      name: 'SKU 4',
+      sales: 0,
+      outOfStock: 0,
+      inventory: 0,
+      avgRank: 0,
+      traffic: 0,
+      impressions: 0,
+  },
+]
+

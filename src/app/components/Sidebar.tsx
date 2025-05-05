@@ -125,7 +125,7 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
 
               {/* Sub-Channels */}
               {channelOpen && (
-                <div className="ml-4 flex flex-col gap-1">
+                <div className="ml-4 flex flex-col gap-1 p-[8px]">
                   {['Meta Ads', 'Google Ads', 'Quick Commerce'].map((channel) => (
                     <button
                       key={channel}

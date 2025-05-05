@@ -10,20 +10,21 @@ import {
 } from '@/components/ui/table'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
-import { ChevronDown, ArrowUp, ArrowDown } from 'lucide-react'
+import { ChevronDown, ArrowUp } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
-import { data } from '../lib/data'
+import { useState } from 'react' 
 import Image from 'next/image'
 import img from '../assets/chartLine.png'
+import { SkuData } from '../types/skuData.type'
 
 interface SkuTableProps {
+ data:SkuData[];
  title:string;
  subHeading:string;
 }
 
 
-export default function SkuTable({title,subHeading}:SkuTableProps) {
+export default function SkuTable({data,title,subHeading}:SkuTableProps) {
     const [expandedRow, setExpandedRow] = useState<string | null>(null)
 
     const handleRowClick = (id: string) => {
@@ -144,13 +145,13 @@ export default function SkuTable({title,subHeading}:SkuTableProps) {
                                         ) : (
                                             <>
                                                 <TableCell className="text-center border-l">
-                                                    ₹{item.sales.toLocaleString('en-IN')}
+                                                    ₹{item.expand ? item.expand.toLocaleString('en-IN'): "-"}
                                                 </TableCell>
                                                 <TableCell className="text-center  ">
-                                                    {item.outOfStock}%
+                                                    {item.stock}%
                                                 </TableCell>
                                                 <TableCell className="text-center  ">
-                                                    {item.inventory !== 0 ? item.inventory : '-'}
+                                                    {item.totalInventory !== 0 ? item.totalInventory : '-'}
                                                 </TableCell>
                                                 <TableCell className="text-center  ">
                                                     {item.avgRank}

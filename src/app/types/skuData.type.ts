@@ -7,5 +7,9 @@ export type SkuData = {
     avgRank: number
     traffic: number
     impressions: number
-    //growth?: number
+    expand?: number
+    stock?: number
+    totalInventory?:number
+    rank?:number
+    estTraffic?:number
 }
