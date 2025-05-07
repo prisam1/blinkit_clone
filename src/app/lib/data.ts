@@ -29,6 +29,7 @@ export const metrics = [
       { city: 'Pune', value: '₹15L', change: '+2%' },
     ],
   };
+  
   export const salesGraphData = [
     { day: "", thisMonth: 1.5, lastMonth: 2.8 },
     { day: "09", thisMonth: 2.8, lastMonth: 2.6 },
@@ -124,9 +125,6 @@ export const data: SkuData[] = [
         impressions: 0,
     },
 ]
-
-
-
 
 export const skuCityData: SkuData[] = [
   {

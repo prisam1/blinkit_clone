@@ -17,8 +17,6 @@ import settings from '../assets/settings.png'
 import users from '../assets/users.png'
 import user_name from '../assets/user_name.png'
 
-
-
 interface SideBarProps {
   open: boolean;
   setOpen: (open: boolean) => void;

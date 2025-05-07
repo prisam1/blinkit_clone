@@ -33,10 +33,10 @@ export function SalesCard() {
                         <span className="text-xs text-[#031B1599]">vs 119.69 last month</span>
                     </div>
                 </div>
-                <SalesLineChart />
-                
-                <div className='w-full h-[1px] bg-[#F1F1F1]' />
 
+                <SalesLineChart />
+
+                <div className='w-full h-[1px] bg-[#F1F1F1]' />
                 <div className="flex gap-[24px] text-xs text-muted-foreground p-[12px]">
                     <div className="flex items-center gap-[6px]">
                         <span className="w-2 h-2 bg-[#1D874F] rounded-full" /> This Month

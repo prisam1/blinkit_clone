@@ -7,9 +7,8 @@ import { Sidebar } from "./components/Sidebar";
 import { TopCitiesCard } from "./components/TopCitiesCard";
 import { SalesCard } from "./components/SalesCard";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import SkuTable from "./components/skuTable"; 
+import SkuTable from "./components/skuTable";
 import { data, skuCityData } from "./lib/data";
-
 
 export default function Home() {
 
@@ -44,29 +43,26 @@ export default function Home() {
 
             <div className='w-full h-[1px] bg-[#F1F1F1]' />
             <div className="px-[16px] py-[12px]">
-
             </div>
-
             <div className='w-full h-[1px] bg-[#F1F1F1]' />
+
             {/* Charts */}
             <div className="grid grid-cols-3 px-[24px] pt-[24px] gap-4 bg-[#FAFAFA]">
-
               <SalesCard />
               <SalesCard />
               <TopCitiesCard />
-
             </div>
 
             {/* Tables Section */}
             <div className="bg-[#FAFAFA] px-[24px] pb-10">
-              <SkuTable 
-              data={data}
-              title="SKU level data"
-               subHeading="Analytics for all your SKUs" />
-              <SkuTable 
-              data={skuCityData}
-              title="City level data"
-               subHeading="Analytics for all your Cities" />
+              <SkuTable
+                data={data}
+                title="SKU level data"
+                subHeading="Analytics for all your SKUs" />
+              <SkuTable
+                data={skuCityData}
+                title="City level data"
+                subHeading="Analytics for all your Cities" />
             </div>
           </div>
         </CardContent>
