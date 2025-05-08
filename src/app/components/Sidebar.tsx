@@ -50,9 +50,7 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
           >
             {!open ? <Menu className="mb-[16px] w-[36px] h-[36px] p-0" /> : <></>}
           </button>
-
           <Image src={perfora} className='w-[38px] h-[38px] p-0' alt="info" />
-
         </div>
 
         {open && (
@@ -82,7 +80,6 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
         <div className={`px-[6px] pt-[6px] flex flex-col  ${open ? 'pb-[28px]' : 'h-[84vh]'} justify-between`}>
           <div className="w-[40px] flex flex-col gap-[6px]">
             <Image src={mamaEarth} width={40} height={40} alt="info" />
-
             <Image src={boat} width={40} height={40} alt="info" />
             <Image src={add} width={40} height={40} alt="info" />
           </div>
@@ -102,12 +99,9 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
                 onClick={() => handleSelect('Overview')}
               >
                 <div className='flex items-center gap-[12px] flex-row'>
-
                   <Image src={home} width={20} height={20} alt="info" />
-
                   <p>Overview</p>
                 </div>
-
               </button>
 
               {/* Channels */}
@@ -117,9 +111,7 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
                 onClick={() => handleSelect('Channels')}
               >
                 <div className='flex items-center gap-[12px] flex-row'>
-
                   <Image src={channels} width={20} height={20} alt="info" />
-
                   <p>Channels</p>
                 </div>
                 {channelOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -150,12 +142,9 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
                 onClick={() => handleSelect('Creatives')}
               >
                 <div className='flex items-center gap-[12px] flex-row'>
-
                   <Image src={creatives} width={20} height={20} alt="info" />
-
                   <p>Creatives</p>
                 </div>
-
               </button>
             </div>
 
@@ -166,12 +155,9 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
                 onClick={() => handleSelect('Creatives')}
               >
                 <div className='flex items-center gap-[12px] flex-row'>
-
                   <Image src={help} width={20} height={20} alt="info" />
-
                   <p>Help</p>
                 </div>
-
               </button>
               <button
                 className={`px-[12px] py-[8px] rounded-[10px] ${expanded === 'Creatives' ? 'bg-[#D7F2E3] text-[#1D874F]' : ''
@@ -179,12 +165,9 @@ export const Sidebar = ({ open, setOpen }: SideBarProps): JSX.Element => {
                 onClick={() => handleSelect('Creatives')}
               >
                 <div className='flex items-center gap-[12px] flex-row'>
-
                   <Image src={settings} width={20} height={20} alt="info" />
-
                   <p>Settings</p>
                 </div>
-
               </button>
             </div>
           </nav>

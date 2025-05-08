@@ -12,19 +12,19 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { ChevronDown, ArrowUp } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react' 
+import { useState } from 'react'
 import Image from 'next/image'
 import img from '../assets/chartLine.png'
 import { SkuData } from '../types/skuData.type'
 
 interface SkuTableProps {
- data:SkuData[];
- title:string;
- subHeading:string;
+    data: SkuData[];
+    title: string;
+    subHeading: string;
 }
 
 
-export default function SkuTable({data,title,subHeading}:SkuTableProps) {
+export default function SkuTable({ data, title, subHeading }: SkuTableProps) {
     const [expandedRow, setExpandedRow] = useState<string | null>(null)
 
     const handleRowClick = (id: string) => {
@@ -43,7 +43,7 @@ export default function SkuTable({data,title,subHeading}:SkuTableProps) {
                 <div>
                     <h1 className="text-[20px] font-bold text-[#031B15]">{title}</h1>
                     <p className="text-[#4F4D55] text-sm">
-                       {subHeading}
+                        {subHeading}
                     </p>
                 </div>
                 <Button variant="outline" className="flex items-center gap-2 font-medium text-[14px] text-white rounded-lg bg-[#027056] px-[12px] py-[10px]">
@@ -108,7 +108,6 @@ export default function SkuTable({data,title,subHeading}:SkuTableProps) {
                                     </TableCell>
                                     <TableCell className="text-center border-l border-b">
                                         {item.avgRank}
-
                                     </TableCell>
                                     <TableCell className="text-center  border-b  ">
                                         {item.traffic !== 0 ? item.traffic.toLocaleString('en-IN') : '-'}
@@ -145,7 +144,7 @@ export default function SkuTable({data,title,subHeading}:SkuTableProps) {
                                         ) : (
                                             <>
                                                 <TableCell className="text-center border-l">
-                                                    ₹{item.expand ? item.expand.toLocaleString('en-IN'): "-"}
+                                                    ₹{item.expand ? item.expand.toLocaleString('en-IN') : "-"}
                                                 </TableCell>
                                                 <TableCell className="text-center  ">
                                                     {item.stock}%

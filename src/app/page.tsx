@@ -27,7 +27,6 @@ export default function Home() {
           <div className="">
             <CardHeader className="flex px-[24px] py-[12px] justify-between items-center">
               <h2 className="text-xl font-semibold">Quick Commerce</h2>
-
               <div className="flex items-center space-x-4">
                 <Button
                   variant="outline"

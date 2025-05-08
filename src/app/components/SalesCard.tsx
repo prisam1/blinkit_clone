@@ -23,7 +23,6 @@ export function SalesCard() {
 
                 <div className='flex flex-row justify-between p-[12px]'>
                     <p className="text-2xl font-bold">125.49</p>
-
                     <div className='flex flex-col items-end'>
                         <div className='flex flex-row gap-[6px] items-center'>
                             <ArrowUp color="#1D874F" className="w-[14px] h-[14px]" />

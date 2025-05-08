@@ -47,12 +47,10 @@ export function TopCitiesCard() {
                                     {city.change}
                                 </span>
                             </div>
-
                         </div>
                     ))}
                 </div>
             </CardContent>
         </Card>
-
     );
 }
